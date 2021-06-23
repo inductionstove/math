@@ -1,0 +1,139 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\newcommand{\qstf}[1]{\begin{center}\textit{Problem #1}\end{center}}
+\newcommand{\qst}[1]{\newpage \begin{center}\textit{Problem #1}\end{center}}
+\newcommand{\sol}{\begin{center}\textit{Solution}\end{center}}
+\newcommand{\thf}{\\\therefore}
+\newcommand{\dx}{\hspace{1mm}dx}
+\newcommand{\du}{\hspace{1mm}du}
+\newcommand{\dy}{\hspace{1mm}dy}
+\title{Exs}
+\author{Sammit }
+\date{June 2021}
+
+\begin{document}
+
+\maketitle
+
+\section*{11.6}
+\qstf{41}
+Prove the root test.
+\sol
+
+Firstly, I must clarify that the if the absolute value of a series is convergent then the series is, and this has been proven.
+\begin{gather*}
+\lim_{n\to\infty}\sqrt[n]{|a_n|}=L
+\\\therefore \sqrt[n]{|a_n|}<r\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{  when }n\geq N
+\\\therefore a_N<r^N
+\thf |a_{N+1}|<r^N \cdot r
+\\\because r<1,\text{ } r^N \cdot r<r^N
+\thf |a_{N}|r^{k}>|a_N|r^{k+1}
+\\\because n \text{ need not be greater then }N\text{ for }r\text{ to be less than }1
+\\\therefore \sum^{\infty}_{n=1}|a_N|r^{n} \text{ is convergent.}
+\thf \sum^{\infty}_{n=1}|a_N|a_n =|a_N|\sum^{\infty}_{n=1}|a_n| \text{ is also convergent}
+\thf\frac{|a_N|}{|a_N|}\sum^{\infty}_{n=1}|a_n| \text{ is also convergent}
+\end{gather*}
+Because the series $a_n$ is absolutely convergent, it is convergent.
+\qst{42}
+$$\frac{1}{\pi}=\frac{2\sqrt{2}}{9801}\sum^{\infty}_{n=0}\frac{(4n!)(1103+26390n)}{(n!)^4396^{4n}}$$
+\sol
+Using the ratio test of convergence, we have:
+\begin{gather*}
+\frac{(n!)^4396^{4n}}{(4n!)(1103+26390n)}\frac{(4n+4)!(1103+26390(n+1))}{396^4(n+1)(n!)^4396^{4n}}
+\\=\frac{1}{(1103+26390n)}\frac{4(4n+1)(4n+2)(4n+3)(1103+26390n+26390)}{396^{4n}}
+\end{gather*}
+At this point if you dont realise that the fraction approaches 0 you have nothing useful in your cranium.
+\newpage$$\pi = \frac{1}{(\frac{2\sqrt{2}}{9801}\sum^{\infty}_{n=0}\frac{(4n!)(1103+26390n)}{(n!)^4396^{4n}})}$$
+\qst{43a}
+Waise yeh common sense wala sawal hai lekin mein apne jasbaaton ko qabu mein rakh kar iska jawaab dene ki imtehaan karunga is liye meri zabaan se kuch idhar udhar se nikla to bura mat maanna main jhoot nahi bolta. Abhi mudde ki baat shuru karte hain:
+\\\\When the positive and negative series of an arbitrary $a_n$ are persived as:
+$$a_n^+ = \frac{a_n+|a_n|}{2} \text{ and } a_n^- = \frac{a_n-|a_n|}{2}$$
+We can see that if a series is absolutely convergent both $a_n$ and $|a_n|$ are convergent, thus the positive and negative series are convergent. If otherwise, than the sum of $a_n$ and $|a_n|$ is not finite and thus the positive and negative series diverge.
+\qst{45A}
+We have for a fact that the terms of a convergent series approach 0, and that the sequence $n^2$ constantly increases with the instant rate of change $2n$, obtained from differentiation. Therefore by the root test,
+$$\frac{a_{n+1}}{a_n}=\frac{(n+1)^2b_{n+1}}{n^2b_n}$$
+Letting this fraction approach infinity we have, $b_n$ and $b_{n+1}$ will approximately be equal (engineering op), whearas the difference between $n^2$ and $(n+1)^2$ will keep on increasing, therefore the limit is greater than one, or perhaps the limit is even indeterminate. Therefore the sequence is indeterminate.
+\\\\Bhai, isi liye dailogue bana hai: Parhai likhai mein dhyaan do, IAS YAS bano aur jake desh ko sambhalo.
+\qst{for fun lol}
+Test the following seris for convergence.
+$$\sum^{\infty}_{i=1} ne^{-n}$$
+\sol
+We shall use the integral test over here, thus we have to find the sum of the definite integral
+$$\int^{\infty}_{1} xe^{-x}\dx$$
+Solving it:
+\begin{gather*}
+\int xe^{-x}\dx
+u=-x
+\\\therefore \int xe^{-x}\dx = \int ue^u \du
+\int ue^u du=ue^u-\int e^u \du
+\\=ue^u-e^u+C = -e^{-x}-e^{-x}+C=-2e^{-x}+C=-\frac{2}{e^x}+C
+\thf \text{Definite integral is equal to}
+-\lim_{t\to\infty}\frac{2}{e^t}+\frac{2}{e}=0+\frac{2}{e}=\frac{2}{e}
+\end{gather*}
+Therefore it can be concluded that the integrlal is convergent, and so the series is convergent.
+\qst{2}
+$$\sum_{n=1}^{\infty} \frac{x^n}{2n-1}$$
+\sol
+Using the ratio test:
+\begin{gather*}
+\frac{x^{n+1}}{2n+1}\cdot \frac{2n-1}{x^n}
+\\=x\frac{2n+1}{2n-1}
+\\\text{Now assigning the limit:}
+\\\lim_{n\to\infty}x\frac{2n+1}{2n-1}=x\lim_{n\to\infty} \frac{\frac{d}{dx}2n+1}{\frac{d}{dx}2n-1}
+\thf \lim_{n\to\infty}x\frac{2n+1}{2n-1}=x
+\end{gather*}
+$\thf$ The series is convergent whenever $|x|<1$, or in other words when $-1<x<1$. Therefore the interval of convergence is (-1, 1) and the radius is 1.
+\qst{9}
+For the following series determine the interval and radius of convergence:
+$$(-1)^n\frac{n^2x^n}{2^n}$$
+Using the ratio test we have:
+\begin{gather*}
+\frac{(-1)^{n+1}(n+1)^2x^{n+1}}{2^{n+1}}\frac{(-1)^n2^n}{n^2x^n}=\frac{x(n+1)^2}{2n^2}=x\frac{n^2+2n+1}{2n^2}
+\\\text{Taking the limit:}
+\lim_{n\to\infty}-x\frac{n^2+2n+1}{2n^2}=x\lim_{n\to\infty}\frac{1+\frac{2}{n}+\frac{1}{n^2}}{2}
+\\=-\frac{x}{2}
+\\|-\frac{x}{2}|<1\text{ if } |x|<2 \text{ thus } -2<x<2
+\end{gather*}
+Therefore the interval of convergence is (-2, 2) and the radius of convergence is 2.
+\newpage
+\section*{11.9}
+\begin{center}\textit{Problem 1}\end{center}
+If the radius of convergence of the series $\sum^{\infty}_{n\to 1}x^n$ is 10, then what is the radius of convergence of the series $\sum^{\infty}_{n\to 1}x^n$?
+\sol
+The radius of convergence will remain 10, as the radius of convergence remains the same between the derivative and the integral of a function.
+\qst{4}
+Determine the infinite series and interval of convergence for the following function:
+$$\frac{5}{1-4x^2}$$
+\sol
+$$\frac{5}{1-4x^2}$$
+This fraction is already of the form $$\frac{a}{1-r}$$ and therefore we can already craft the infinite series $$\sum^{\infty}_{n=1}5x^{n-1}$$
+Now we use the root test to determine the interval of convergence:
+\begin{gather*}
+\lim_{n\to\infty}\left|\frac{5x^{n}}{5x^{n-1}}\right|=\lim_{n\to\infty}|x|
+\\\thf \text{ For the series to converge} -1<x<1.
+\end{gather*}
+\qst{10}
+$$f(x)=\frac{x^2}{a^3-x^3}$$
+\sol
+\begin{gather*}
+f(x)=\frac{x^2}{a^3-x^3}=x^2\frac{1}{1-(-a^3-x^3+1)}=-x^2\frac{1}{
+\end{gather*}
+\qst{13A}
+Determine the radius of convergence:
+$$\frac{1}{(1+x)^2}$$
+\sol
+Through differentiation:
+\begin{gather*}
+\frac{1}{(1+x)^2}=(1+x)^{-2}=f(x)
+\thf f'(x)=\frac{-2}{1+x}=\sum^{\infty}_{n=0}(-2)x^n
+\\\text{Using the ratio test:}
+\\\lim_{n\to\infty}\left|\frac{-2x^{n+1}}{-2x^n}\right|=|x|
+\thf \text{ The series is convergent when }|x|<1
+\thf -1<x<1
+\end{gather*}
+\end{document}
+
