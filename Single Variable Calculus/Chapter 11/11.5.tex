@@ -1,0 +1,115 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{I will change it stfu}
+\author{r.suhrit2017}
+\date{March 2021}
+\begin{document}
+\maketitle
+\section{Introduction}
+Unless specifically mentioned, nth term will always indicate nth term of the sequence $b_n$.
+\\\\1
+\\a. An alternating  series is one where the sign of the term alternates, i.e., when every term of a sequence is multiplied with $(-1)^{n}$ or $(-1)^{(n+1)}$.
+\\b. If an alternating seies is constantly decreasing, and the terms of the series approach zero as $n$ becomes arbiterarily large, the series is convergent.
+\\c. This shows that the remainder of the partial sums is leser than the next term.
+\\\\2. $$\sum^{\infty}_{n=1}\frac{2(-1)^{n-1}}{2n+1}$$
+\\\begin{gather*}
+n^{th} \text{ term}=\frac{2}{2n+1}
+\\\text{The first condition is clearly satisfied. We test for the second condition:}
+\\\lim_{n\to\infty}\frac{2}{2n+1}=\lim_{n\to\infty}\frac{\frac{2}{n}}{2+\frac{1}{n}}=\frac{0}{2}=0
+\end{gather*}
+With both the conditions satisfied, we can conclude that the series is convergent.
+\\\\3. $$\sum^{\infty}_{n=1}\frac{2n(-1)^{n-1}}{n+4}$$
+\\We find that the sequence is increasing, for the nth term =$$\frac{2n}{n+4}$$ Through calculus it is obvious that the rate of increment in the numerator is higher, and thus the sequence starts to increase after the first 4 terms. This proves that it is not strictly increasing, and so the sequrnce is divergent.
+\\\\4. $$\sum^{\infty}_{n=1}\frac{(-1)^{n-1}}{\sqrt{n}}$$
+\\The alternating sequence $$\frac{1}{\sqrt{n}}$$ is clearly convergent what the fuck is wrong with you its clearly decreasing and clearly approaching zero as n approaches infinity.
+\\\\5. $$\sum^{\infty}_{n=1}\frac{(-1)^{n-1}}{\ln{n}+4}$$
+The series $$\sum^{\infty}_{n=1}\frac{1}{\ln{n}+4}$$ satisfies $b_{n+1}<b_{n}$ because $\ln{n}$ is a strictly increasing function. Then, we have
+\begin{gather*}
+\lim_{n\to\infty}\frac{1}{\ln{n}+4}
+\\=\frac{1}{\infty+4}=\frac{1}{\infty}=0
+\end{gather*}
+\\Thus we have proved that the series is convergent.
+\\\\8. $$(-1)^{n-1}\frac{n}{\sqrt{n^3+2}}$$
+We will divide this but the highest power in the nummerator by the highest in the denominator:
+\begin{gather*}
+\text{Numerator:}
+\\\frac{n}{n^{\frac{3}{2}}}=n^{1-\frac{3}{2}}=\frac{1}{\sqrt{n}}
+\\\text{Dinominator:}
+\\\frac{\sqrt{n^3+2}}{n^{\frac{3}{2}}}=\sqrt{\frac{n^3}{n^3}+\frac{2}{n^3}}
+\\\text{Now we take the fraction as a whole:}t
+\\\frac{\frac{1}{\sqrt{n}}}{\sqrt{1+\frac{2}{n^3}}}=\frac{1}{\sqrt{n+\frac{2}{n^2}}}
+\\\lim_{n\to\infty}\frac{1}{\sqrt{n+\frac{2}{n^2}}}=0
+\end{gather*}
+The second condition asks us to prove that $b_n$ is strictly decreasing. This is true, and one can confirm it by graphing the function. Even though the function $b_x$ is not strictly decreasing, if the domain is restricted to natural numbers then $b_{n+1}\geq b_n$, and thus it can be concluded that the series is convergent.
+\\
+\\23
+\\Firlty we have to prove that the seires is convergent. It has alreay been seen that the zeta function is convergent with the domain is restricted in this way: $$\{x: x>1\}$$
+Yet, we will look at a specific proof because bo class is damn boring.
+\begin{gather*}
+\int^{\infty}_{1} \frac{1}{n^6}\hspace{1mm}dx=\lim_{t\to\infty}int^{t}_{1} \frac{1}{n^6}\hspace{1mm}dx=\lim_{t\to\infty} -\frac{t^{-5}}{5}+\frac{1}{5}=\lim_{t\to\infty} \frac{-1}{5t^{5}}+\frac{1}{5}=0+\frac{1}{5}=\frac{1}{5}
+\end{gather*}
+\\Because 0.2 is a finite number the integral is convergent, and so is the series.
+\\For error less than 0.00005;
+\begin{gather*}
+\\0.00005\leq\frac{1}{n^6}
+\\\therefore 0.00005\leq n^{6}
+\\\therefore \sqrt[6]{\frac{1}{0.00005}}\sqrt[6]{\frac{100000}{5}}=\sqrt[6]{20000}\approx 5.21\leq n\sqrt[6]{\frac{100000}{5}}=\sqrt[6]{20000}\approx 5.21\text{, so we can take the value }n=5
+\\\therefore \text{For an approximation with error 0.00005, we can take }n+1=5
+\\\therefore n=4.
+\end{gather*}
+\\\\24
+\\Before proceeding, one must observe that the fraction is multiplied by $(-1)^n$ instead of $(-1)^{n-1}$. Since our formula only works for $(-1)^{n-1}b_n$, we can multiply divide the fraction with -1, resultint in a - sign appearing in front of the faction.
+\\If error less than 0.0001 then $b_{n+1}$ >
+ 0.001.
+\\Solving the inequality:
+\begin{gather*}
+\frac{1}{n5^n}=0.0001
+\\\therefore n5^n=10000
+\\\therefore n=\frac{2^4\cdot 5^4}{5^n}
+\\\therefore n=16\cdot 5^{4-n}
+\\\therefore 10000=(16\cdot 5^{4-n})5^n
+\end{gather*}
+\\
+\\36.
+\\a.
+\\Let us split the sums of $s_{2n}$ and $h_{2n}$ into the sums of their odd and even terms. Since the sums of their odd terms are equal anyway, we can subtract them from both sides of the equation. A new variable, $a$ shall be used. This indicates the nth term but since we have the limits as $n$ and $2n$, $a$ is used for clarity.
+\begin{gather*}
+\sum^{2n}_{a=1}\frac{(-1)^{2a-1}}{a}=\sum^{n}_{a=1}\frac{1}{2a}-\frac{1}{a}
+\\\therefore \frac{-1}{2a}=\frac{-1}{2a}
+\end{gather*}
+Both the sides of the equation now mathc, hence proved.
+\\b.
+\\
+\begin{gather*}
+\sum^{2n}_{n=1}\frac{(-1)^{n-1}}{n}+\sum^{n}_{n\to 1}\frac{1}{n}-\ln{2n}\to\gamma
+\\\text{as }n\to\infty
+\\\therefore \lim_{n\to\infty}\sum^{2n}_{n=1}\frac{(-1)^{n-1}}{n}+\sum^{n}_{n\to 1}\frac{1}{n}-\ln{2n}=\lim_{n\to\infty}\sum^{2n}_{n\to 1}\frac{1}{n}-\sum^{2n}_{n=1}\frac{(-1)^{n-1}}{n}-\ln{n}
+\\\therefore \lim_{n\to\infty}\sum^{2n}_{n=1}\frac{(-1)^{n-1}}{n}+ \lim_{n\to\infty}\sum^{n}_{n\to 1}\frac{1}{n}- \lim_{n\to\infty}\ln{2n}=\lim_{n\to\infty}\sum^{2n}_{n\to 1}\frac{1}{n}- \lim_{n\to\infty}\sum^{2n}_{n=1}\frac{(-1)^{n-1}}{n}- \lim_{n\to\infty}\ln{n}
+\\\therefore  \lim_{n\to\infty}\sum^{2n}_{n=1}\frac{(-1)^{n-1}}{n}=\lim_{n\to\infty}\ln{2n}-\ln{n}=\ln(\frac{2x}{x})
+\\\therefore \lim_{n\to\infty}\sum^{2n}_{n=1}\frac{(-1)^{n-1}}{n}=\ln{2}
+\\\therefore \sum^{\infty}_{n=1}\frac{(-1)^{n-1}}{n}=\ln{2}
+\\\therefore \textbf{\textit{QDL}}
+\end{gather*}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

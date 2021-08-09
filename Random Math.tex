@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\newcommand{\qstf}[1]{\begin{center}\textit{Problem #1}\end{center}}
+\newcommand{\qst}[1]{\newpage \begin{center}\textit{\textbf{Problem #1}}\end{center}}
+\newcommand{\sol}{\begin{center}\textit{\textbf{Solution}}\end{center}}
+\newcommand{\thf}{\\\therefore}
+\newcommand{\dx}{\hspace{1mm}dx}
+\newcommand{\du}{\hspace{1mm}du}
+\newcommand{\dy}{\hspace{1mm}dy}
+\newcommand{\dt}{\hspace{1mm}dt}
+\newcommand{\tit}[1]{\textit{#1}}
+\newcommand{\qed}{\\\therefore \textbf{\textit{Q.E.D.}}}
+\title{Random Math}
+\author{induction-stove}
+\date{2021}
+\begin{document}
+\maketitle
+\begin{gather*}
+\\x=\int^{x}_{0} 1 \dt
+\\x^2=\int^{x}_{0} 2t \dt
+\\y=\int^{y}_{0} 1 \dt
+\\y^2=\int^{y}_{0} 2t \dt
+\\x+y=\int^{x+y}_{0} 1 \dt=\int^{x}_{0}1\dt+\int^{x+y}_x 1\dt
+\\(x+y)^2=\int^{(x+y)}_0 2t\dt
+\\u=2t
+\thf \frac{du}{2} = dt
+\newpage
+\end{gather*}
+\end{document}

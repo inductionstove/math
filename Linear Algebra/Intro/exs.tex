@@ -1,0 +1,146 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\newcommand{\qst}[1]{\begin{center}\textit{\textbf{Problem #1}}\end{center}}
+\newcommand{\sol}{\begin{center}\textit{\textbf{Solution}}\end{center}}
+\newcommand{\thf}{\\\therefore}
+\newcommand{\dx}{\hspace{1mm}dx}
+\newcommand{\du}{\hspace{1mm}du}
+\newcommand{\dy}{\hspace{1mm}dy}
+\newcommand{\tit}[1]{\textit{#1}}
+\newcommand{\qed}{\\\begin{center}$\therefore \textbf{\textit{Q.E.D.}}$\end{center}}
+\newcommand{\pt}[1]{\\\begin{center}\textit{\textbf{Part #1}}\end{center}}
+\newcommand{\ptf}[1]{\begin{center}\textit{\textbf{Part #1}}\end{center}}
+\newcommand{\hs}[1]{\hspace{#1mm}}
+\newcommand{\subsec}[1]{\newpage \subsection*{#1}}
+\title{Introduction to Linear Algebra Excersises}
+\author{inductionstove}
+\date{2021}
+
+\begin{document}
+\maketitle
+\section*{Chapter 1}
+\subsection*{Exercise 3}
+\begin{center}\textit{\textbf{Problem 3}}\end{center}
+Given that $A$ and $B$ are two vectors defined on the same dimentions, prove that $(A+B)^2=A^2+B^2+2AB$, and that $(A-B)^2=A^2+B^2-2AB$
+\sol
+\begin{gather*}
+A=(a_1, a_2, a_3,....a_n)
+\thf A^2 = (a_1^2, a_2^2, a_3^2,....a_n^2)
+\\B=(b_1, b_2, b_3,....b_n)
+\thf B^2=(b_1^2, b_2^2, b_3^2,....b_n^2)
+\thf 2AB = (2a_1b_1, 2a_2b_2, 2a_nb_n)
+\thf (A+B)=(a_1+b_1, a_2+b_2.....a_n+b_n)
+\thf (A+B)^2=((a_1^2+b_1^2+2a_1b_1),(a_2^2+b_2^2+2a_2b_2),...(a_n^2+b_n^2+2a_nb_n))
+\\=(a_1^2, a_2^2, a_3^2,....a_n^2)+(b_1^2, b_2^2, b_3^2,....b_n^2)+(2a_1b_1, 2a_2b_2, 2a_nb_n)
+\\=A^2+B^2+2AB
+\end{gather*}
+\qed
+PTO
+\\Now, we move on to the next proof.
+\begin{gather*}
+A=(a_1, a_2, a_3,....a_n)
+\thf A^2 = (a_1^2, a_2^2, a_3^2,....a_n^2)
+\\B=(b_1, b_2, b_3,....b_n)
+\thf B^2=(b_1^2, b_2^2, b_3^2,....b_n^2)
+\thf 2AB = (2a_1b_1, 2a_2b_2, 2a_nb_n)
+\thf (A-B)=(a_1-b_1, a_2-b_2.....a_n-b_n)
+\thf (A-B)^2=((a_1-b_1)^2, (a_2-b_2)^2,....(a_n-b_n)^2)
+\\=((a_1^2+b_1^2-2a_1b_1),(a_2^2+b_2^2-2a_2b_2),...(a_n^2+b_n^2-2a_nb_n))
+\\=(a_1^2, a_2^2, a_3^2,....a_n^2)+(b_1^2, b_2^2, b_3^2,....b_n^2)-(2a_1b_1, 2a_2b_2, 2a_nb_n)
+\\=A^2+B^2-2AB
+\end{gather*}
+\qed
+\qst{5}
+Given that vector $A$ is perpendicular to any and all vectors, prove that $A$ is a 0 vector. You may take any and all vectors to be $X$.
+\sol
+\begin{gather*}
+A=(a_1, a_2, a_3,....a_n)
+\\X=(x_1, x_2, x_3,....x_n)
+\\AX=\sum^{n}_{i=1}a_ix_i
+\end{gather*}
+Because $x_i$ can be any number, the only way the sum of all the terms is 0 is by ensuring that all the terms are equal to 0, and that can only be the case if $a_i$ is 0 in all cases, because 0 is the only number which yieds 0 as the product when multiplied with any number.
+\begin{gather*}
+\therefore a_i = 0 \text{ for all }i.
+\thf A \text{ is a 0 vector.}
+\end{gather*}
+\subsec{Exercise 4}
+
+Find the norm of the vector A in the following cases.
+\pt{A}
+A=(2, -1)
+\sol
+\begin{gather*}
+||A||=\sqrt{\sum^{n}_{i=1} a_i^2}
+\\=\sqrt{2^2+(-1)^2}=\sqrt{4+1}=\sqrt{5}
+\end{gather*}
+\pt{E}
+$$A=(\pi, 3, -1)$$
+\sol
+\begin{gather*}
+||A||=\sqrt{\sum^{n}_{i=1} a_i^2}
+\\=\sqrt{\pi^2+3^2+(-1^2)}
+\\=\sqrt{\pi^2+10}
+\end{gather*}
+\qst{3}
+Find the projection of $A$ along $B$.
+\pt{B}
+$$A=(-1, 3);\hs{1} B=(0,4)$$
+\sol
+\begin{gather*}
+c=\frac{A\cdot B}{B\cdot B}
+\\=\frac{(-1\cdot 0)+(3\cdot 4)}{(0\cdot0)+(4\cdot4)}=\frac{12}{16}=\frac{3}{4}
+\\\text{Projection of A along B }=cB
+\\=\frac{3}{4}(0,4)=(0,3)
+\end{gather*}
+\qst{5}
+Find the cosine between the following vectors $A$ and $B$.
+\ptf{A}
+$$A=(1, -2);\hs{1} B=(5, 3)$$
+\sol
+\begin{gather*}
+A\cdot B=1\cdot5+-2\cdot3=-1
+\\||A||=\sqrt{1^2+(-2)^2}=\sqrt{5}
+\\||B||=\sqrt{5^2+3^2}=\sqrt{34}
+\\\cos{\theta}=\frac{A\cdot B}{||A||\hs{0.5}||B||}
+\\=-\frac{1}{\sqrt{5}\sqrt{34}}
+\end{gather*}
+\qst{6 A}
+Find the cosine of the angle formed by these vertices:
+$$(2, -1, 1),\hs{1}(1, -3, 5), \hs{1}(3, -4, -4)$$
+\sol
+I shall consider the angle to be denoted by $\vartheta$ instead of $\theta$ to phleks the seski math symbol.
+\\Firstly, we shall lable the points.
+\begin{gather*}
+\\(2, -1, 1) = A
+\\(1, -3, 5) = B
+\\(3, -4, -4) = C
+\\\overrightarrow{AB}=B-A=(-1, -2, 4)
+\\\overrightarrow{BC}=C-B=(2, -1, -9)
+\thf \cos{\vartheta} = \frac{A\cdot B}{||A||\hs{0.5}||B||}
+\\=\frac{(-1)\cdot2+(-2)\cdot(-1)+4\cdot9}{(\sqrt{(-1)^2+(-2)^2+4^2})(\sqrt{2^2+(-1)^2+(-9)^2})}
+\\=\frac{36}{\sqrt{21}\sqrt{41}}
+\\
+\\f'(x)=f'(g(x))\cdot g'(x)
+\end{gather*}
+\qst{7}Actually fuck it if you wanna see the solution head to my chat with $yang\_neo$ so ya.
+\\No wait we chat about a lot of shit which you dont wanna see youre gonna judge us so dont
+\newpage
+\subsec{Exercise 6}
+\qst{2}
+Let  $y  =  mx + b$ and  $y  =  m' x  + c$  be  the  equations  of  two  lines  in  the  plane. Write  down  vectors  perpendicular  to  these  lines. Show  that  these  vectors  are perpendicular  to each  other  if  and  only  if  $mm'  = - 1$
+\sol
+\begin{gather*}
+b=y-mx
+\\c=y-m'x
+\thf (1, -m)= \text{Vector }\beta \{\text{seski phlex}\},
+\\(1, -m')= \text{Vector }\gamma \{\text{seski phlex again}\}
+\\\beta \cdot \gamma = 0
+\thf 1\cdot 1 + -m\cdot(-m')=0
+\thf 1+mm'=0
+\thf mm'=(-1)
+\end{gather*}
+\qed
+\end{document}
